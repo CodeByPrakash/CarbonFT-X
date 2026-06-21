@@ -4,7 +4,7 @@
 
 Built for the **PromptWars** hackathon (Google for Developers × Hack2Skill).
 
-🔗 **Live Demo:** Vercel - []() | Kimi - [qzdh3d6q6ehpu.kimi.page](https://qzdh3d6q6ehpu.kimi.page)
+🔗 **Live Demo:** Vercel - [Carbon-Wise](https://carbon-ft-x.vercel.app/) | Kimi - [qzdh3d6q6ehpu.kimi.page](https://qzdh3d6q6ehpu.kimi.page)
 💻 **Repository:** [github.com/CodeByPrakash/CarbonFT-X](https://github.com/CodeByPrakash/CarbonFT-X)
 
 ---
