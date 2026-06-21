@@ -4,9 +4,11 @@ import { defineConfig } from "vite"
 import { inspectAttr } from 'kimi-plugin-inspect-react'
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   base: './',
-  plugins: [inspectAttr(), react()],
+  // inspectAttr() writes debug source-location attributes onto the DOM for
+  // Kimi's editor — dev-only, so it never ships in the production build.
+  plugins: [command === 'serve' ? inspectAttr() : null, react()].filter(Boolean),
   server: {
     port: 3000,
   },
@@ -15,4 +17,4 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-});
+}));
