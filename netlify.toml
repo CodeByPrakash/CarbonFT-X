@@ -1,0 +1,8 @@
+1	[build]
+2	  command = "npm run build"
+3	  publish = "dist"
+4	
+5	[build.environment]
+6	  NODE_VERSION = "20"
+7	  NPM_FLAGS = "--include=dev"
+8
