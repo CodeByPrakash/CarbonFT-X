@@ -1,73 +1,89 @@
-# React + TypeScript + Vite
+# 🌍 CarbonWise
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**A full-featured carbon footprint tracking and sustainability education web app.**
 
-Currently, two official plugins are available:
+Built for the **PromptWars** hackathon (Google for Developers × Hack2Skill).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 **Live Demo:** [qzdh3d6q6ehpu.kimi.page](https://qzdh3d6q6ehpu.kimi.page)
+💻 **Repository:** [github.com/CodeByPrakash/CarbonFT-X](https://github.com/CodeByPrakash/CarbonFT-X)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ What It Does
 
-## Expanding the ESLint configuration
+CarbonWise turns carbon footprint tracking into something interactive, visual, and genuinely educational — not just a number on a dashboard. It's built around six connected experiences:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🌍 Hero
+An immersive dark-themed entry point with an animated Canvas globe — a rotating Earth with orbiting leaf particles, twinkling stars, and mouse-reactive parallax — plus animated stat counters and gradient CTAs.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 📝 Track
+Tabbed activity logging across four categories — **Transport, Food, Energy, Shopping** — with real-time CO2 impact calculations, sliders, dropdowns, and a live summary panel showing today's footprint with a color-coded breakdown bar.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 📊 Dashboard
+A rich analytics hub featuring:
+- Animated carbon score ring (0–100)
+- Recharts area chart for footprint trends
+- Weekly goal progress bar
+- Donut chart for category breakdown
+- 6-badge achievement grid
+- Personalized eco-tips
+- Weekly comparison bar chart
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 🗺️ Visualize
+An interactive SVG world map with color-coded emission intensity, hover tooltips, and click-to-detail country panels — plus global stats cards and side-by-side perspective comparisons (flight vs. commute, food choices, energy sources).
+
+### 📚 Learn
+A dark-themed educational hub with:
+- A 5-question interactive climate quiz with progress tracking and a result rating
+- A "Day in Your Life" simulator — build a daily schedule and watch the carbon total update live
+- 6 flip cards revealing climate myths vs. facts with 3D CSS transitions
+
+### ⚡ Take Action
+A filterable grid of 9 eco-action cards with category badges, impact levels, and difficulty ratings. Includes a "My Commitments" panel tracking total CO2 savings and a community impact counter.
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Tools |
+|---|---|
+| Framework | React 19 + TypeScript + Vite |
+| Styling | Tailwind CSS + shadcn/ui |
+| Animation | GSAP + ScrollTrigger, Lenis (smooth scroll) |
+| Data Viz | Recharts, Canvas API (globe) |
+| Persistence | LocalStorage (activities & commitments) |
+| Design | Custom forest-green / eco-accent color palette |
+
+Fully responsive — sidebar on desktop, top bar + bottom nav on mobile.
+
+---
+
+## 🚀 Getting Started
+
+```bash
+# Clone the repo
+git clone https://github.com/CodeByPrakash/CarbonFT-X.git
+cd CarbonFT-X
+
+# Install dependencies
+npm install
+
+# Run the dev server
+npm run dev
+
+# Build for production
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📄 License
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+This project is licensed under the [MIT License](./LICENSE).
+
+---
+
+## 👤 Author
+
+**Prakash** ([@CodeByPrakash](https://github.com/CodeByPrakash))
+Built for PromptWars — a vibe-coding hackathon by Google for Developers × Hack2Skill.
